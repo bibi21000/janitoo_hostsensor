@@ -1,0 +1,6 @@
+[janitoo.threads]
+hostsensor = janitoo_hostsensor.hostsensor:make_thread
+
+[janitoo.components]
+hostsensor.load = janitoo_hostsensor.hostsensor:make_load
+
