@@ -38,7 +38,6 @@ import os, sys
 import threading
 import time
 from datetime import datetime, timedelta
-import sensors as pysensors
 from janitoo.options import get_option_autostart
 from janitoo.utils import HADD, HADD_SEP, json_dumps, json_loads
 from janitoo.node import JNTNode
