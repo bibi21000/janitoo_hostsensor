@@ -82,7 +82,10 @@ setup(
     include_package_data=True,
     data_files = data_files,
     install_requires=[
-                     'janitoo == %s'%janitoo_version,
+                     'janitoo >= %s'%"0.0.6",
                     ],
+    dependency_links = [
+      'https://github.com/bibi21000/janitoo/archive/master.zip#egg=janitoo-%s'%"0.0.7",
+    ],
     entry_points = janitoo_entry_points,
 )
