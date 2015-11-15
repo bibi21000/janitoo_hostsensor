@@ -72,6 +72,7 @@ setup(
         along with Janitoo. If not, see <http://www.gnu.org/licenses/>.
     """,
     author='Sébastien GALLET aka bibi2100 <bibi21000@gmail.com>',
+    scripts=['src/scripts/jnt_hostsensor'],
     author_email='bibi21000@gmail.com',
     url='http://bibi21000.gallet.info/',
     version = janitoo_version,
