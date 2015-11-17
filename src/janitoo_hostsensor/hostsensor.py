@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The Samsung Janitoo helper
+"""The hostsensor Janitoo helper
 
 """
 
@@ -26,17 +26,12 @@ __copyright__ = "Copyright © 2013-2014-2015 Sébastien GALLET aka bibi21000"
 
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
-try:  # Python 2.7+                                   # pragma: no cover
-    from logging import NullHandler                   # pragma: no cover
-except ImportError:                                   # pragma: no cover
-    class NullHandler(logging.Handler):               # pragma: no cover
-        """NullHandler logger for python 2.6"""       # pragma: no cover
-        def emit(self, record):                       # pragma: no cover
-            pass                                      # pragma: no cover
-logger = logging.getLogger('janitoo.roomba')
+logger = logging.getLogger('janitoo.hostsensor')
 import os, sys
 import threading
 import time
+from uptime import uptime
+
 from datetime import datetime, timedelta
 from janitoo.options import get_option_autostart
 from janitoo.utils import HADD, HADD_SEP, json_dumps, json_loads
@@ -65,6 +60,9 @@ assert(COMMAND_DESC[COMMAND_NOTIFY] == 'COMMAND_NOTIFY')
 
 def make_load(**kwargs):
     return Load(**kwargs)
+
+def make_uptime(**kwargs):
+    return Uptime(**kwargs)
 
 def make_thread(options):
     if get_option_autostart(options, 'hostsensor') == True:
@@ -126,3 +124,27 @@ class Load(JNTComponent):
             for i in [0, 1, 2]:
                 self.values['load'].instances[i]['data'] = avg[i]
         return self.values['load'].instances[i]['data']
+
+class Uptime(JNTComponent):
+    """ Return Load system """
+
+    def __init__(self, bus=None, addr=None, **kwargs):
+        JNTComponent.__init__(self, 'hostsensor.uptime', bus=bus, addr=addr, name="Uptime",
+                product_name="Uptime", product_type="Software", product_manufacturer="Uptime", **kwargs)
+        logger.debug("[%s] - __init__ node uuid:%s", self.__class__.__name__, self.uuid)
+
+        uuid="uptime"
+        self.values[uuid] = self.value_factory['sensor_float'](options=self.options, uuid=uuid,
+            node_uuid=self.uuid,
+            help='Uptime in seconds',
+            label='Uptime',
+            get_data_cb=self.get_uptime,
+            genre=0x01,
+        )
+        poll_value = self.values[uuid].create_poll_value(default=60)
+        self.values[poll_value.uuid] = poll_value
+
+    def get_uptime(self, node_uuid, index):
+        """
+        """
+        return uptime()

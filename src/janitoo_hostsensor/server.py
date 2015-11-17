@@ -26,6 +26,9 @@ __author__ = 'Sébastien GALLET aka bibi21000'
 __email__ = 'bibi21000@gmail.com'
 __copyright__ = "Copyright © 2013-2014-2015 Sébastien GALLET aka bibi21000"
 
+import logging
+logger = logging.getLogger('janitoo.hostsensor')
+
 from threading import Thread, Event
 import subprocess
 import time
@@ -36,19 +39,8 @@ import urllib2
 import json
 import requests
 import json
-# Set default logging handler to avoid "No handler found" warnings.
-import logging
-try:  # Python 2.7+                                   # pragma: no cover
-    from logging import NullHandler                   # pragma: no cover
-except ImportError:                                   # pragma: no cover
-    class NullHandler(logging.Handler):               # pragma: no cover
-        """NullHandler logger for python 2.6"""       # pragma: no cover
-        def emit(self, record):                       # pragma: no cover
-            pass                                      # pragma: no cover
-logger = logging.getLogger('janitoo.roomba')
-#logger.addHandler(NullHandler())
-
 from pkg_resources import get_distribution, DistributionNotFound
+
 from janitoo.server import JNTServer
 
 class HostSensorServer(JNTServer):

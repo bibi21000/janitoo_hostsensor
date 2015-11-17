@@ -48,6 +48,7 @@ janitoo_entry_points = {
     ],
     "janitoo.components": [
         "hostsensor.load = janitoo_hostsensor.hostsensor:make_load",
+        "hostsensor.uptime = janitoo_hostsensor.hostsensor:make_uptime",
     ],
 }
 
@@ -84,6 +85,7 @@ setup(
     data_files = data_files,
     install_requires=[
                      'janitoo >= %s'%"0.0.6",
+                     'uptime',
                     ],
     dependency_links = [
       'https://github.com/bibi21000/janitoo/archive/master.zip#egg=janitoo-%s'%"0.0.7",
