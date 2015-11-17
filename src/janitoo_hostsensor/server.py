@@ -54,4 +54,4 @@ class HostSensorServer(JNTServer):
             _dist = get_distribution('janitoo_hostsensor')
             return _dist.__file__
         except AttributeError:
-            return os.path.join("/opt/janitoo/src",'src-hostsensor/config')
+            return os.path.join("/opt/janitoo/src",'janitoo_hostsensor/src/config')
