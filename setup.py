@@ -85,7 +85,7 @@ setup(
     data_files = data_files,
     install_requires=[
                      'janitoo >= %s'%"0.0.6",
-                     'uptime',
+                     'uptime >= 3.0',
                     ],
     dependency_links = [
       'https://github.com/bibi21000/janitoo/archive/master.zip#egg=janitoo-%s'%"0.0.7",
