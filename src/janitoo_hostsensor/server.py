@@ -30,15 +30,6 @@ import logging
 logger = logging.getLogger('janitoo.hostsensor')
 
 from threading import Thread, Event
-import subprocess
-import time
-import traceback
-import urllib
-import socket
-import urllib2
-import json
-import requests
-import json
 from pkg_resources import get_distribution, DistributionNotFound
 
 from janitoo.server import JNTServer
