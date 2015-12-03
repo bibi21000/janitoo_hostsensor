@@ -1,6 +1,10 @@
 .. image:: https://travis-ci.org/bibi21000/janitoo_hostsensor.svg?branch=master
     :target: https://travis-ci.org/bibi21000/janitoo_hostsensor
-    :alt: Travis test status
+    :alt: Travis status
+
+.. image:: https://coveralls.io/repos/bibi21000/janitoo_hostsensor/badge.svg?branch=master&service=github
+    :target: https://coveralls.io/github/bibi21000/janitoo_hostsensor?branch=master
+    :alt: Coveralls results
 
 ===============
 The README file
