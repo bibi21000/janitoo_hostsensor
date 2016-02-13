@@ -64,7 +64,6 @@ class TestHostSensorSerser(JNTTServer, JNTTServerCommon):
     server_conf = "tests/data/janitoo_hostsensor.conf"
 
     def test_101_wait_for_all_nodes(self):
-        self.onlyTravisTest()
         self.start()
         try:
             self.assertHeartbeatNode(hadd=HADD%(1048,0))
@@ -76,18 +75,7 @@ class TestHostSensorSerser(JNTTServer, JNTTServerCommon):
         finally:
             self.stop()
 
-    def test_110_request_system_values(self):
-        self.start()
-        try:
-            nodeHADD=HADD%(1048,0)
-            self.assertHeartbeatNode(hadd=nodeHADD)
-            self.assertNodeRequest(cmd_class=COMMAND_DISCOVERY, uuid='request_info_nodes', node_hadd=nodeHADD, client_hadd=HADD%(9999,0))
-            self.assertBroadcastRequest(cmd_class=COMMAND_DISCOVERY, uuid='request_info_nodes', client_hadd=HADD%(9999,0))
-        finally:
-            self.stop()
-
-    def test_120_server_start_no_error_in_log(self):
-        self.onlyRasperryTest()
+    def test_111_server_start_no_error_in_log(self):
         self.start()
         try:
             time.sleep(120)
