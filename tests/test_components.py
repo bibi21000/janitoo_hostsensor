@@ -42,6 +42,7 @@ from janitoo.utils import TOPIC_BROADCAST_REPLY, TOPIC_BROADCAST_REQUEST
 from janitoo.utils import TOPIC_VALUES_USER, TOPIC_VALUES_CONFIG, TOPIC_VALUES_SYSTEM, TOPIC_VALUES_BASIC
 
 from janitoo_hostsensor.hostsensor import HostSensorThread
+import janitoo_hostsensor.hostsensor
 
 ##############################################################
 #Check that we are in sync with the official command classes
@@ -58,7 +59,7 @@ class TestComponentLoad(JNTTComponent, JNTTComponentCommon):
     """
     component_name = "hostsensor.load"
 
-class TestComponentOutput(JNTTComponent, JNTTComponentCommon):
+class TestComponentUptime(JNTTComponent, JNTTComponentCommon):
     """Test the component
     """
     component_name = "hostsensor.uptime"
