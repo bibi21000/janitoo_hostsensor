@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 import os, sys
 import threading
 import time
-from uptime import uptime
+import uptime
 
 from datetime import datetime, timedelta
 from janitoo.options import get_option_autostart
@@ -146,4 +146,4 @@ class Uptime(JNTComponent):
     def get_uptime(self, node_uuid, index):
         """
         """
-        return uptime()
+        return uptime.uptime()

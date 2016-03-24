@@ -66,4 +66,3 @@ class TestComponentUptime(JNTTComponent, JNTTComponentCommon):
     """Test the component
     """
     component_name = "hostsensor.uptime"
-
