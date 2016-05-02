@@ -83,9 +83,13 @@ class Load(JNTComponent):
     """ Return Load system """
 
     def __init__(self, bus=None, addr=None, **kwargs):
-        JNTComponent.__init__(self, 'hostsensor.load', bus=bus, addr=addr, name="Load statistics",
-                product_name="Load statistics", product_type="Software", product_manufacturer="Load statistics", **kwargs)
-        logger.debug("[%s] - __init__ node uuid:%s", self.__class__.__name__, self.uuid)
+        JNTComponent.__init__(self,
+            oid = kwargs.pop('oid', 'hostsensor.load'),
+            bus = bus,
+            addr = addr,
+            name = kwargs.pop('name', "Load"),
+            product_name = kwargs.pop('product_name', "Load statistics"),
+            **kwargs)
 
         uuid="load"
         self.values[uuid] = self.value_factory['sensor_float'](options=self.options, uuid=uuid,
@@ -128,8 +132,13 @@ class Uptime(JNTComponent):
     """ Return Load system """
 
     def __init__(self, bus=None, addr=None, **kwargs):
-        JNTComponent.__init__(self, 'hostsensor.uptime', bus=bus, addr=addr, name="Uptime",
-                product_name="Uptime", product_type="Software", product_manufacturer="Uptime", **kwargs)
+        JNTComponent.__init__(self,
+            oid = kwargs.pop('oid', 'hostsensor.uptime'),
+            bus = bus,
+            addr = addr,
+            name = kwargs.pop('name', "Uptime"),
+            product_name = kwargs.pop('product_name', "Uptime statistics"),
+            **kwargs)
         logger.debug("[%s] - __init__ node uuid:%s", self.__class__.__name__, self.uuid)
 
         uuid="uptime"
