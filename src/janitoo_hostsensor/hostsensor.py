@@ -57,14 +57,16 @@ assert(COMMAND_DESC[COMMAND_AV_VOLUME] == 'COMMAND_AV_VOLUME')
 assert(COMMAND_DESC[COMMAND_NOTIFY] == 'COMMAND_NOTIFY')
 ##############################################################
 
+OID = 'hostsensor'
+
 def make_load(**kwargs):
     return Load(**kwargs)
 
 def make_uptime(**kwargs):
     return Uptime(**kwargs)
 
-def make_thread(options):
-    if get_option_autostart(options, 'hostsensor') == True:
+def make_thread(options, force = False):
+    if get_option_autostart(options, OID) == True or force:
         return HostSensorThread(options)
     else:
         return None
