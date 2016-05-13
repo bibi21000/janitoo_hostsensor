@@ -1,0 +1,19 @@
+janitoo_hostsensor package
+==========================
+
+Show janitoo's extensions.
+
+Core extensions
+---------------
+
+Threads
+^^^^^^^
+
+ - hostsensor (janitoo_hostsensor.hostsensor:make_thread)
+
+Components
+^^^^^^^^^^
+
+ - hostsensor.load (janitoo_hostsensor.hostsensor:make_load)
+ - hostsensor.uptime (janitoo_hostsensor.hostsensor:make_uptime)
+
