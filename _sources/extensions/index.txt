@@ -1,19 +1,7 @@
-janitoo_hostsensor package
-==========================
+Janitoo's extensions
+====================
 
-Show janitoo's extensions.
+This package contains the following extensions for Janitoo.
 
-Core extensions
----------------
-
-Threads
-^^^^^^^
-
- - hostsensor (janitoo_hostsensor.hostsensor:make_thread)
-
-Components
-^^^^^^^^^^
-
- - hostsensor.load (janitoo_hostsensor.hostsensor:make_load)
- - hostsensor.uptime (janitoo_hostsensor.hostsensor:make_uptime)
+.. jnt-extensions::
 
