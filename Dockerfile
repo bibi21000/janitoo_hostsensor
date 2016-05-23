@@ -15,7 +15,7 @@ RUN make clone module=janitoo_hostsensor && \
     apt-get clean && rm -Rf /tmp/*|| true && \
     [ -d /root/.cache ] && rm -Rf /root/.cache/*
 
-VOLUME ["/root/.ssh/", "/opt/janitoo/etc/"]
+VOLUME ["/root/.ssh/", "/etc/ssh/", "/opt/janitoo/etc/"]
 
 EXPOSE 22
 
