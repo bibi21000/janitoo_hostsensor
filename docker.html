@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Python Module Index &mdash; janitoo_hostsensor 0.0.6 documentation</title>
+    <title>Using the docker appliance &mdash; janitoo_hostsensor 0.0.6 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -33,13 +33,11 @@
     <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="janitoo_hostsensor 0.0.6 documentation" href="index.html" />
-
+    <link rel="prev" title="Welcome to documentation!" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-
-
 
   </head>
   <body>
@@ -74,10 +72,10 @@
      href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="docker.html"> Docker appliance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#installing-docker">Installing Docker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#initial-clone">Initial clone</a></li>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href=""> Docker appliance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-docker">Installing Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-clone">Initial clone</a></li>
 </ul>
 </li>
 </ul>
@@ -88,6 +86,10 @@
             
               
                 
+  <li>
+    <a href="index.html" title="Previous Chapter: Welcome to documentation!"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Welcome to do...</span>
+    </a>
+  </li>
               
             
             
@@ -113,34 +115,32 @@
   <div class="row">
     <div class="col-md-12 content">
       
-
-   <h1>Python Module Index</h1>
-
-   <div class="modindex-jumpbox">
-   <a href="#cap-j"><strong>j</strong></a>
-   </div>
-
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-j"><td></td><td>
-       <strong>j</strong></td><td></td></tr>
-     <tr>
-       <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-       <td>
-       <a href="api/index.html#module-janitoo_hostsensor"><tt class="xref">janitoo_hostsensor</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="api/index.html#module-janitoo_hostsensor.hostsensor"><tt class="xref">janitoo_hostsensor.hostsensor</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="api/index.html#module-janitoo_hostsensor.server"><tt class="xref">janitoo_hostsensor.server</tt></a></td><td>
-       <em></em></td></tr>
-   </table>
+  <div class="section" id="using-the-docker-appliance">
+<h1>Using the docker appliance<a class="headerlink" href="#using-the-docker-appliance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-docker">
+<h2>Installing Docker<a class="headerlink" href="#installing-docker" title="Permalink to this headline">¶</a></h2>
+<p>Using your favorite method :</p>
+</div>
+<div class="section" id="initial-clone">
+<h2>Initial clone<a class="headerlink" href="#initial-clone" title="Permalink to this headline">¶</a></h2>
+<p>Pull the image :</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>docker pull bibi21000/janitoo_hostsensor
+</pre></div>
+</div>
+<p>Create a data volume container :</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>docker create -v /root/.ssh/ -v /opt/janitoo/etc/ --name hostsensor_store bibi21000/janitoo_hostsensor /bin/true
+</pre></div>
+</div>
+<p>And run it :</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>docker run -d --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
+</pre></div>
+</div>
+<p>Inspect your running docker image :</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>docker inspect hostsensor_running
+</pre></div>
+</div>
+</div>
+</div>
 
 
     </div>
