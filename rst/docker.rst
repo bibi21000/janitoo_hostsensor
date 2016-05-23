@@ -62,11 +62,20 @@ Check that is running :
     CONTAINER ID        IMAGE                          COMMAND             CREATED              STATUS          PORTS                  NAMES
     cc1a58b59f7c        bibi21000/janitoo_hostsensor   "/root/auto.sh"     About a minute ago   Up 8 seconds    0.0.0.0:8882->22/tcp   hostsensor_running
 
-and stop it :
+And stop it :
 
 .. code:: bash
 
     docker stop hostsensor_running
+
+
+You can also attach a started 'running' container to get a look at the top command:
+
+.. code:: bash
+
+    docker attach hostsensor_running
+
+To detach use ctrl + p + ctrl + q
 
 
 Update your installation
