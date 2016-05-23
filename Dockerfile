@@ -4,6 +4,8 @@ MAINTAINER bibi21000 <bibi21000@gmail.com>
 
 RUN date +'%Y/%m/%d %H:%M:%S'
 
+COPY docker/appliance/ /opt/janitoo/etc/
+
 WORKDIR /opt/janitoo/src
 
 RUN ls -lisa
