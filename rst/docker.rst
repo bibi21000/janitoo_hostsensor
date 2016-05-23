@@ -2,6 +2,7 @@
 Using the docker appliance
 ==========================
 
+
 Installing Docker
 =================
 
@@ -114,7 +115,7 @@ Copy your key to the docker image to bypass the password :
 
     ssh-copy-id root@$127.0.0.1 -p 8882
 
-Disable root login to ssh with password :
+Disable root login with password :
 
 .. code:: bash
 
@@ -131,8 +132,28 @@ Update the hostsensor configuration file :
 
 Default password is janitoo. You can change it but it will be restored on the next running container update. Prefer the key solutions.
 
-Open the configuration file. The docker image contains a decent release of vim for editing python files.
+Open the configuration file. The docker image contains a nano or vim for editing files :
 
 .. code:: bash
 
     vim /opt/janitoo/etc/janitoo_hostsensor.conf
+
+Update the broker ip. It should match the ip addresse of your shared "mosquitto" :
+
+.. code:: bash
+
+    broker_ip = 192.168.1.14
+
+If you plan to install more than one janitoo_hostsensor image on your network, you must change the hadd of bus and components :
+
+.. code:: bash
+
+    hadd = 0121/0000
+
+to
+
+.. code:: bash
+
+    hadd = 0122/0000
+
+And so on for 0121/0001, 0121/0002, ... Keep in mind that hadd must be unique on your network.
