@@ -138,13 +138,13 @@ Open the configuration file. The docker image contains a nano or vim for editing
 
     vim /opt/janitoo/etc/janitoo_hostsensor.conf
 
-Update the broker ip. It should match the ip addresse of your shared "mosquitto" :
+You must at least update the broker ip. It should match the ip address of your shared "mosquitto" :
 
 .. code:: bash
 
     broker_ip = 192.168.1.14
 
-If you plan to install more than one janitoo_hostsensor image on your network, you must change the hadd of bus and components :
+If you plan to install more than one janitoo_hostsensor image on your network, you must change the hadd of the bus and components :
 
 .. code:: bash
 
