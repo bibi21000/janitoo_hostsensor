@@ -79,6 +79,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../docker.html#start-the-container">Start the container</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../docker.html#update-your-installation">Update your installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../docker.html#customize-your-installation">Customize your installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../docker.html#performances">Performances</a></li>
 </ul>
 </li>
 </ul>
@@ -174,7 +175,7 @@
 <span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_NOTIFY</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_NOTIFY&#39;</span><span class="p">)</span>
 <span class="c">##############################################################</span>
 
-<span class="n">OID</span> <span class="o">=</span> <span class="s">&#39;hostsensor&#39;</span>
+<span class="kn">from</span> <span class="nn">janitoo_hostsensor</span> <span class="kn">import</span> <span class="n">OID</span>
 
 <div class="viewcode-block" id="make_load"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.make_load">[docs]</a><span class="k">def</span> <span class="nf">make_load</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Load</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -203,7 +204,7 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">JNTComponent</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;hostsensor.load&#39;</span><span class="p">),</span>
+            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.load&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
             <span class="n">bus</span> <span class="o">=</span> <span class="n">bus</span><span class="p">,</span>
             <span class="n">addr</span> <span class="o">=</span> <span class="n">addr</span><span class="p">,</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Load&quot;</span><span class="p">),</span>
@@ -252,7 +253,7 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">JNTComponent</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;hostsensor.uptime&#39;</span><span class="p">),</span>
+            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.uptime&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
             <span class="n">bus</span> <span class="o">=</span> <span class="n">bus</span><span class="p">,</span>
             <span class="n">addr</span> <span class="o">=</span> <span class="n">addr</span><span class="p">,</span>
             <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Uptime&quot;</span><span class="p">),</span>
