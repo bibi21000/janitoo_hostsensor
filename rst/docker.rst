@@ -242,7 +242,7 @@ Save and restart your server to apply.
 Performances
 ============
 
-The top result of the running applicance :
+The top result of the running appliance :
 
 .. code:: bash
 
