@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    Docker appliance<docker>
+    Docker appliance image<docker>
 
 Indices and tables
 ==================

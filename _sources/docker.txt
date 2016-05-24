@@ -136,7 +136,7 @@ Open the configuration file. The docker image contains a nano or vim for editing
 
 .. code:: bash
 
-    vim /opt/janitoo/etc/janitoo_hostsensor.conf
+    root@8eafc45f6d09:~# vim /opt/janitoo/etc/janitoo_hostsensor.conf
 
 You must at least update the broker ip. It should match the ip address of your shared "mosquitto" :
 
