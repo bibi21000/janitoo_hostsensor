@@ -2,6 +2,8 @@ FROM bibi21000/janitoo_docker_appliance
 
 MAINTAINER bibi21000 <bibi21000@gmail.com>
 
+ENV JANITOO_HOSTSENSOR_VERSION 3
+
 RUN date +'%Y/%m/%d %H:%M:%S'
 
 WORKDIR /opt/janitoo/src
