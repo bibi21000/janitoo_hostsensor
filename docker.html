@@ -295,11 +295,27 @@ temp1:        +47.8 C  (high = +70.0 C)
 </div>
 <div class="section" id="performances">
 <h2>Performances<a class="headerlink" href="#performances" title="Permalink to this headline">¶</a></h2>
-<p>The top result of the running appliance :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+<p>The top result in the running appliance :</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>root@7de7e4993b13:~# top
 </pre></div>
 </div>
-<p>26650 root      20   0  342636  21668   4484 S   2,3  0,2   0:38.45 /usr/local/bin/python /usr/local/bin/jnt_hostsensor -c /etc/janitoo/janitoo_hostsensor.c+</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>top - 20:35:46 up 1 day,  2:13,  1 user,  load average: 0.41, 0.65, 0.67
+Tasks:   8 total,   1 running,   7 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.3 us,  1.4 sy,  0.0 ni, 90.9 id,  1.4 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:  11661364 total, 10395640 used,  1265724 free,  1712168 buffers
+KiB Swap: 19530748 total,     9460 used, 19521288 free.  3876920 cached Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+   12 root      20   0  489240  23088   4472 S   2.7  0.2   0:58.21 /usr/local/bin/python /usr/local/bin/jnt_hostsensor -c /etc/janitoo/janitoo_hostsensor.c+
+   11 root      39  19   23500   1492   1200 S   0.3  0.0   0:00.12 top -b
+    1 root      20   0   21740   1596   1328 S   0.0  0.0   0:00.03 /bin/bash /root/auto.sh
+   10 root      20   0   55508  10068   1336 S   0.0  0.1   0:00.06 /usr/bin/python /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+   13 root      20   0   55176   3120   2444 S   0.0  0.0   0:00.01 /usr/sbin/sshd -D
+   24 root      20   0   82716   3936   3076 S   0.0  0.0   0:00.06 sshd: root@pts/0
+   29 root      20   0   20244   1904   1488 S   0.0  0.0   0:00.00 -bash
+   34 root      20   0   21940   1412   1048 R   0.0  0.0   0:00.12 top
+</pre></div>
+</div>
 </div>
 </div>
 
