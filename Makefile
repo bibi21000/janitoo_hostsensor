@@ -174,7 +174,6 @@ docker-deps:
 appliance-deps:
 	-cp -rf docker/appliance/* /opt/janitoo/etc/
 	-cp -rf docker/supervisor.conf.d/* /etc/supervisor/janitoo.conf.d/
-	-cp -rf docker/supervisor-tests.conf.d/* /etc/supervisor/janitoo-tests.conf.d/
 	-cp -rf docker/nginx/* /etc/nginx/conf.d/
 	@echo
 	@echo "Appliance dependencies for ${MODULENAME} installed."
