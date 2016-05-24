@@ -2,13 +2,9 @@
 Using the docker appliance
 ==========================
 
-.. image:: https://img.shields.io/imagelayers/image-size/bibi21000/janitoo_hostsensor/latest.svg
-    :target: https://hub.docker.com/r/bibi21000/janitoo_hostsensor/
-    :alt: Docker size
-
-.. image:: https://img.shields.io/imagelayers/layers/bibi21000/janitoo_hostsensor/latest.svg
-    :target: https://hub.docker.com/r/bibi21000/janitoo_hostsensor/
-    :alt: Docker size
+.. image:: https://imagelayers.io/badge/bibi21000/janitoo_hostsensor:latest.svg
+    :target: https://imagelayers.io/?images=bibi21000/janitoo_hostsensor:latest
+    :alt: Docker image layers
 
 
 Installing Docker
