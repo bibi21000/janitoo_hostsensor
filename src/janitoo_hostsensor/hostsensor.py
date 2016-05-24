@@ -151,7 +151,7 @@ class Uptime(JNTComponent):
             get_data_cb=self.get_uptime,
             genre=0x01,
         )
-        poll_value = self.values[uuid].create_poll_value(default=60)
+        poll_value = self.values[uuid].create_poll_value(default=300)
         self.values[poll_value.uuid] = poll_value
 
     def get_uptime(self, node_uuid, index):
