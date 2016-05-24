@@ -57,7 +57,7 @@ assert(COMMAND_DESC[COMMAND_AV_VOLUME] == 'COMMAND_AV_VOLUME')
 assert(COMMAND_DESC[COMMAND_NOTIFY] == 'COMMAND_NOTIFY')
 ##############################################################
 
-OID = 'hostsensor'
+from janitoo_hostsensor import OID
 
 def make_load(**kwargs):
     return Load(**kwargs)
@@ -86,7 +86,7 @@ class Load(JNTComponent):
 
     def __init__(self, bus=None, addr=None, **kwargs):
         JNTComponent.__init__(self,
-            oid = kwargs.pop('oid', 'hostsensor.load'),
+            oid = kwargs.pop('oid', '%s.load'%OID),
             bus = bus,
             addr = addr,
             name = kwargs.pop('name', "Load"),
@@ -135,7 +135,7 @@ class Uptime(JNTComponent):
 
     def __init__(self, bus=None, addr=None, **kwargs):
         JNTComponent.__init__(self,
-            oid = kwargs.pop('oid', 'hostsensor.uptime'),
+            oid = kwargs.pop('oid', '%s.uptime'%OID),
             bus = bus,
             addr = addr,
             name = kwargs.pop('name', "Uptime"),
