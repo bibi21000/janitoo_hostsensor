@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
     Docker appliance image<docker>
+    Extension projects<docker>
 
 Indices and tables
 ==================
