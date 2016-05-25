@@ -74,37 +74,6 @@ And stop it :
     $ docker stop hostsensor_running
 
 
-You can also attach a started 'running' container to get a look at the top command:
-
-.. code:: bash
-
-    $ docker attach hostsensor_running
-
-To detach use ctrl + p + ctrl + q
-
-
-Update your installation
-========================
-
-Delete the 'running' container :
-
-.. code:: bash
-
-    $ docker rm hostsensor_running
-
-Pull the image release :
-
-.. code:: bash
-
-    $ docker pull bibi21000/janitoo_hostsensor
-
-And create a new 'running' container :
-
-.. code:: bash
-
-    $ docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
-
-
 Customize your installation
 ===========================
 
