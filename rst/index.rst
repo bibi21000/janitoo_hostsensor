@@ -13,6 +13,8 @@ Contents:
 
     Docker appliance image<docker>
     Extension projects<subprojects>
+    Queries results<queries>
+    Using documentation <using_doc>
 
 Indices and tables
 ==================
