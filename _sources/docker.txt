@@ -20,25 +20,25 @@ Pull the image :
 
 .. code:: bash
 
-    docker pull bibi21000/janitoo_hostsensor
+    $ docker pull bibi21000/janitoo_hostsensor
 
 Create a 'store' container  :
 
 .. code:: bash
 
-    docker create -v /root/.ssh/ -v /opt/janitoo/etc/ --name hostsensor_store bibi21000/janitoo_hostsensor /bin/true
+    $ docker create -v /root/.ssh/ -v /opt/janitoo/etc/ --name hostsensor_store bibi21000/janitoo_hostsensor /bin/true
 
 Create a 'running' container :
 
 .. code:: bash
 
-    docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
+    $ docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
 
 Yous should now have 2 created containers :
 
 .. code:: bash
 
-    docker ps -a
+    $ docker ps -a
 
 .. code:: bash
 
@@ -54,13 +54,13 @@ Start it :
 
 .. code:: bash
 
-    docker start hostsensor_running
+    $ docker start hostsensor_running
 
 Check that is running :
 
 .. code:: bash
 
-    docker ps
+    $ docker ps
 
 .. code:: bash
 
@@ -71,59 +71,15 @@ And stop it :
 
 .. code:: bash
 
-    docker stop hostsensor_running
-
-
-You can also attach a started 'running' container to get a look at the top command:
-
-.. code:: bash
-
-    docker attach hostsensor_running
-
-To detach use ctrl + p + ctrl + q
-
-
-Update your installation
-========================
-
-Delete the 'running' container :
-
-.. code:: bash
-
-    docker rm hostsensor_running
-
-Pull the image release :
-
-.. code:: bash
-
-    docker pull bibi21000/janitoo_hostsensor
-
-And create a new 'running' container :
-
-.. code:: bash
-
-    docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
+    $ docker stop hostsensor_running
 
 
 Customize your installation
 ===========================
 
-You can customize your docker image. This configuration is saved in the 'store' container.
+You can find basis customizations tips here : https://bibi21000.github.io/janitoo_docker_appliance/customize.html.
 
-SSH
----
-
-Copy your key to the docker image to bypass the password :
-
-.. code:: bash
-
-    ssh-copy-id root@$127.0.0.1 -p 8882
-
-Disable root login with password :
-
-.. code:: bash
-
-    sed -i -e "s/^#PermitRootLogin without-password/PermitRootLogin without-password/" /etc/ssh/sshd_config
+This configuration is saved in the 'store' container.
 
 Configuration
 -------------
@@ -132,7 +88,7 @@ Update the hostsensor configuration file :
 
 .. code:: bash
 
-    ssh root@$127.0.0.1 -p 8882
+    $ ssh root@$127.0.0.1 -p 8882
 
 Default password is janitoo. You can change it but it will be restored on the next running container update. Prefer the key solutions.
 
@@ -269,3 +225,8 @@ The top result in the running appliance :
        24 root      20   0   82716   3936   3076 S   0.0  0.0   0:00.06 sshd: root@pts/0
        29 root      20   0   20244   1904   1488 S   0.0  0.0   0:00.00 -bash
        34 root      20   0   21940   1412   1048 R   0.0  0.0   0:00.12 top
+
+Administer your containers
+==========================
+
+You can find basis administration tips here : https://bibi21000.github.io/janitoo_docker_appliance/administer.html.

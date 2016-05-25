@@ -78,9 +78,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#installing-docker">Installing Docker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#initial-installation">Initial installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#start-the-container">Start the container</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#update-your-installation">Update your installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#customize-your-installation">Customize your installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#performances">Performances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#administer-your-containers">Administer your containers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="subprojects.html"> Extension projects</a><ul>
@@ -140,19 +140,19 @@
 <div class="section" id="initial-installation">
 <h2>Initial installation<a class="headerlink" href="#initial-installation" title="Permalink to this headline">¶</a></h2>
 <p>Pull the image :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker pull bibi21000/janitoo_hostsensor
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker pull bibi21000/janitoo_hostsensor
 </pre></div>
 </div>
 <p>Create a &#8216;store&#8217; container  :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker create -v /root/.ssh/ -v /opt/janitoo/etc/ --name hostsensor_store bibi21000/janitoo_hostsensor /bin/true
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker create -v /root/.ssh/ -v /opt/janitoo/etc/ --name hostsensor_store bibi21000/janitoo_hostsensor /bin/true
 </pre></div>
 </div>
 <p>Create a &#8216;running&#8217; container :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
 </pre></div>
 </div>
 <p>Yous should now have 2 created containers :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker ps -a
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker ps -a
 </pre></div>
 </div>
 <div class="code bash highlight-python"><div class="highlight"><pre>CONTAINER ID        IMAGE                          COMMAND             CREATED             STATUS      PORTS       NAMES
@@ -164,11 +164,11 @@
 <div class="section" id="start-the-container">
 <h2>Start the container<a class="headerlink" href="#start-the-container" title="Permalink to this headline">¶</a></h2>
 <p>Start it :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker start hostsensor_running
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker start hostsensor_running
 </pre></div>
 </div>
 <p>Check that is running :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker ps
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker ps
 </pre></div>
 </div>
 <div class="code bash highlight-python"><div class="highlight"><pre>CONTAINER ID        IMAGE                          COMMAND             CREATED              STATUS          PORTS                  NAMES
@@ -176,48 +176,18 @@ cc1a58b59f7c        bibi21000/janitoo_hostsensor   &quot;/root/auto.sh&quot;    
 </pre></div>
 </div>
 <p>And stop it :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker stop hostsensor_running
-</pre></div>
-</div>
-<p>You can also attach a started &#8216;running&#8217; container to get a look at the top command:</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker attach hostsensor_running
-</pre></div>
-</div>
-<p>To detach use ctrl + p + ctrl + q</p>
-</div>
-<div class="section" id="update-your-installation">
-<h2>Update your installation<a class="headerlink" href="#update-your-installation" title="Permalink to this headline">¶</a></h2>
-<p>Delete the &#8216;running&#8217; container :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker rm hostsensor_running
-</pre></div>
-</div>
-<p>Pull the image release :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker pull bibi21000/janitoo_hostsensor
-</pre></div>
-</div>
-<p>And create a new &#8216;running&#8217; container :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>docker create --volumes-from hostsensor_store -p 8882:22 --name hostsensor_running bibi21000/janitoo_hostsensor
+<div class="code bash highlight-python"><div class="highlight"><pre>$ docker stop hostsensor_running
 </pre></div>
 </div>
 </div>
 <div class="section" id="customize-your-installation">
 <h2>Customize your installation<a class="headerlink" href="#customize-your-installation" title="Permalink to this headline">¶</a></h2>
-<p>You can customize your docker image. This configuration is saved in the &#8216;store&#8217; container.</p>
-<div class="section" id="ssh">
-<h3>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h3>
-<p>Copy your key to the docker image to bypass the password :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>ssh-copy-id root@$127.0.0.1 -p 8882
-</pre></div>
-</div>
-<p>Disable root login with password :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>sed -i -e &quot;s/^#PermitRootLogin without-password/PermitRootLogin without-password/&quot; /etc/ssh/sshd_config
-</pre></div>
-</div>
-</div>
+<p>You can find basis customizations tips here : <a class="reference external" href="https://bibi21000.github.io/janitoo_docker_appliance/customize.html">https://bibi21000.github.io/janitoo_docker_appliance/customize.html</a>.</p>
+<p>This configuration is saved in the &#8216;store&#8217; container.</p>
 <div class="section" id="configuration">
 <h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
 <p>Update the hostsensor configuration file :</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>ssh root@$127.0.0.1 -p 8882
+<div class="code bash highlight-python"><div class="highlight"><pre>$ ssh root@$127.0.0.1 -p 8882
 </pre></div>
 </div>
 <p>Default password is janitoo. You can change it but it will be restored on the next running container update. Prefer the key solutions.</p>
@@ -327,6 +297,10 @@ KiB Swap: 19530748 total,     9460 used, 19521288 free.  3876920 cached Mem
    34 root      20   0   21940   1412   1048 R   0.0  0.0   0:00.12 top
 </pre></div>
 </div>
+</div>
+<div class="section" id="administer-your-containers">
+<h2>Administer your containers<a class="headerlink" href="#administer-your-containers" title="Permalink to this headline">¶</a></h2>
+<p>You can find basis administration tips here : <a class="reference external" href="https://bibi21000.github.io/janitoo_docker_appliance/administer.html">https://bibi21000.github.io/janitoo_docker_appliance/administer.html</a>.</p>
 </div>
 </div>
 
