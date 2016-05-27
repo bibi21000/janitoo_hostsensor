@@ -5,6 +5,8 @@ Welcome to documentation!
 .. jnt-package::
     :infos: desc, longdesc
 
+.. jnt-badge::
+
 License
 =======
 
