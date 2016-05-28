@@ -51,8 +51,8 @@ janitoo_entry_points = {
 
 setup(
     name = 'janitoo_hostsensor',
-    description = "A controller for local sensors (lmsensors, cpu, disk, ...)",
-    long_description = "A controller for local sensors (lmsensors, cpu, disk, ...)",
+    description = "Monitor local sensors (load, uptime)",
+    long_description = "Monitor local sensors (load, uptime)",
     license = """
         This file is part of Janitoo.
 
