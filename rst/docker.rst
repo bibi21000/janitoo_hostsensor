@@ -87,7 +87,7 @@ Update the hostsensor configuration file :
 
 .. code:: bash
 
-    $ ssh root@$127.0.0.1 -p 8882
+    $ ssh root@127.0.0.1 -p 8882
 
 Default password is janitoo. You can change it but it will be restored on the next running container update. Prefer the key solutions.
 
@@ -209,21 +209,21 @@ The top result in the running appliance :
 
 .. code:: bash
 
-    top - 20:35:46 up 1 day,  2:13,  1 user,  load average: 0.41, 0.65, 0.67
+    top - 19:08:40 up 10 days, 46 min,  1 user,  load average: 0.34, 0.50, 0.58
     Tasks:   8 total,   1 running,   7 sleeping,   0 stopped,   0 zombie
-    %Cpu(s):  6.3 us,  1.4 sy,  0.0 ni, 90.9 id,  1.4 wa,  0.0 hi,  0.0 si,  0.0 st
-    KiB Mem:  11661364 total, 10395640 used,  1265724 free,  1712168 buffers
-    KiB Swap: 19530748 total,     9460 used, 19521288 free.  3876920 cached Mem
+    %Cpu(s):  7.3 us,  3.9 sy,  0.0 ni, 88.5 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
+    KiB Mem:  11661364 total, 11257872 used,   403492 free,   586084 buffers
+    KiB Swap: 19530748 total,   301772 used, 19228976 free.  4392228 cached Mem
 
       PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
-       12 root      20   0  489240  23088   4472 S   2.7  0.2   0:58.21 /usr/local/bin/python /usr/local/bin/jnt_hostsensor -c /etc/janitoo/janitoo_hostsensor.c+
-       11 root      39  19   23500   1492   1200 S   0.3  0.0   0:00.12 top -b
-        1 root      20   0   21740   1596   1328 S   0.0  0.0   0:00.03 /bin/bash /root/auto.sh
-       10 root      20   0   55508  10068   1336 S   0.0  0.1   0:00.06 /usr/bin/python /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
-       13 root      20   0   55176   3120   2444 S   0.0  0.0   0:00.01 /usr/sbin/sshd -D
-       24 root      20   0   82716   3936   3076 S   0.0  0.0   0:00.06 sshd: root@pts/0
-       29 root      20   0   20244   1904   1488 S   0.0  0.0   0:00.00 -bash
-       34 root      20   0   21940   1412   1048 R   0.0  0.0   0:00.12 top
+       42 root      20   0  489236  23464   4480 S   3.0  0.2   1:01.15 /usr/local/bin/python /usr/local/bin/jnt_hostsensor -c /etc/janitoo/janitoo_hostsensor+
+       55 root      20   0   21940   1424   1048 R   0.3  0.0   0:00.25 top
+        1 root      20   0   21740   1600   1328 S   0.0  0.0   0:00.04 /bin/bash /root/auto.sh
+       10 root      20   0   55508  10176   1412 S   0.0  0.1   0:00.25 /usr/bin/python /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+       11 root      39  19   23500   1492   1200 S   0.0  0.0   0:00.45 top -b
+       13 root      20   0   55176   3112   2444 S   0.0  0.0   0:00.02 /usr/sbin/sshd -D
+       32 root      20   0   82716   3936   3076 S   0.0  0.0   0:00.15 sshd: root@pts/0
+       34 root      20   0   20244   2056   1568 S   0.0  0.0   0:00.03 -bash
 
 Administer your containers
 ==========================
