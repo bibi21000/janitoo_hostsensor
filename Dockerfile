@@ -13,6 +13,7 @@ RUN ls -lisa
 RUN make clone module=janitoo_hostsensor && \
     make clone module=janitoo_hostsensor_psutil && \
     make clone module=janitoo_hostsensor_lmsensor && \
+    make deps module=janitoo_hostsensor && \
     make appliance-deps module=janitoo_hostsensor && \
     apt-get clean && rm -Rf /tmp/*|| true && \
     [ -d /root/.cache ] && rm -Rf /root/.cache/*
