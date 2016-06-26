@@ -133,7 +133,10 @@ class Load(JNTComponent):
     def check_heartbeat(self):
         """Check that the component is 'available'
         """
-        return self.values['load'].data is not None
+        try:
+            return self.values['load'].data is not None
+        except Exception:
+            return None
 
 class Uptime(JNTComponent):
     """ Return Load system """
@@ -167,4 +170,7 @@ class Uptime(JNTComponent):
     def check_heartbeat(self):
         """Check that the component is 'available'
         """
-        return self.values['uptime'].data is not None
+        try:
+            return self.values['uptime'].data is not None
+        except Exception:
+            return None
