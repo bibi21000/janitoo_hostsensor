@@ -130,6 +130,11 @@ class Load(JNTComponent):
                 self.values['load'].instances[i]['data'] = avg[i]
         return self.values['load'].instances[i]['data']
 
+    def check_heartbeat(self):
+        """Check that the component is 'available'
+        """
+        return self.values['load'].data is not None
+
 class Uptime(JNTComponent):
     """ Return Load system """
 
@@ -158,3 +163,8 @@ class Uptime(JNTComponent):
         """
         """
         return uptime.uptime()
+
+    def check_heartbeat(self):
+        """Check that the component is 'available'
+        """
+        return self.values['uptime'].data is not None
