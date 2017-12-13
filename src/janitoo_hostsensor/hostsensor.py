@@ -121,7 +121,7 @@ class Load(JNTComponent):
     def get_config(self, node_uuid, index):
         """
         """
-        self.create_instances(self.values['load'], index)
+        self._create_instances(self.values['load'], index)
         return self.values['load'].instances[index]['config']
 
     def get_load_average(self, node_uuid, index):
@@ -129,7 +129,7 @@ class Load(JNTComponent):
         """
         if index>2:
             return None
-        self.create_instances(self.values['load'], index)
+        self._create_instances(self.values['load'], index)
         if index == 0:
             avg = list(os.getloadavg())
             for i in [0, 1, 2]:
