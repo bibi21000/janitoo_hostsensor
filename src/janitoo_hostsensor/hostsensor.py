@@ -106,7 +106,7 @@ class Load(JNTComponent):
         poll_value = self.values[uuid].create_poll_value(default=60)
         self.values[poll_value.uuid] = poll_value
 
-    def _create_instances(value, index):
+    def _create_instances(self, value, index):
         """
         """
         if index not in value.instances:
