@@ -129,10 +129,10 @@ class Load(JNTComponent):
         """
         if index>2:
             return None
-        self._create_instances(self.values['load'], index)
         if index == 0:
             avg = list(os.getloadavg())
             for i in [0, 1, 2]:
+                self._create_instances(self.values['load'], i)
                 self.values['load'].instances[i]['data'] = avg[i]
         return self.values['load'].instances[i]['data']
 
