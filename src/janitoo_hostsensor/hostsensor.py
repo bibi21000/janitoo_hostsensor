@@ -106,17 +106,22 @@ class Load(JNTComponent):
         poll_value = self.values[uuid].create_poll_value(default=60)
         self.values[poll_value.uuid] = poll_value
 
+    def _create_instances(value, index):
+        """
+        """
+        if index not in value.instances:
+            value.instances[index] = {}
+            if index == 0:
+                value.instances[index]['config'] = '1 minutes'
+            elif index == 1:
+                value.instances[index]['config'] = '5 minutes'
+            elif index == 2:
+                value.instances[index]['config'] = '15 minutes'
+
     def get_config(self, node_uuid, index):
         """
         """
-        if index not in self.values['load'].instances:
-            self.values['load'].instances[index] = {}
-            if index == 0:
-                self.values['load'].instances[index]['config'] = '1 minutes'
-            elif index == 1:
-                self.values['load'].instances[index]['config'] = '5 minutes'
-            elif index == 2:
-                self.values['load'].instances[index]['config'] = '15 minutes'
+        self.create_instances(self.values['load'], index)
         return self.values['load'].instances[index]['config']
 
     def get_load_average(self, node_uuid, index):
@@ -124,6 +129,7 @@ class Load(JNTComponent):
         """
         if index>2:
             return None
+        self.create_instances(self.values['load'], index)
         if index == 0:
             avg = list(os.getloadavg())
             for i in [0, 1, 2]:
