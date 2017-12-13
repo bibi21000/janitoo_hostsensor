@@ -109,14 +109,14 @@ class Load(JNTComponent):
     def get_config(self, node_uuid, index):
         """
         """
-        if index == 0:
-            if index not in self.values['load'].instances:
-                self.values['load'].instances[0] = {}
-                self.values['load'].instances[1] = {}
-                self.values['load'].instances[2] = {}
-            self.values['load'].instances[0]['config'] = '1 minutes'
-            self.values['load'].instances[1]['config'] = '5 minutes'
-            self.values['load'].instances[2]['config'] = '15 minutes'
+        if index not in self.values['load'].instances:
+            self.values['load'].instances[index] = {}
+            if index == 0:
+                self.values['load'].instances[index]['config'] = '1 minutes'
+            elif index == 1:
+                self.values['load'].instances[index]['config'] = '5 minutes'
+            elif index == 2:
+                self.values['load'].instances[index]['config'] = '15 minutes'
         return self.values['load'].instances[index]['config']
 
     def get_load_average(self, node_uuid, index):
