@@ -1,0 +1,30 @@
+janitoo_hostsensor package
+==========================
+
+Submodules
+----------
+
+janitoo_hostsensor.hostsensor module
+------------------------------------
+
+.. automodule:: janitoo_hostsensor.hostsensor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+janitoo_hostsensor.server module
+--------------------------------
+
+.. automodule:: janitoo_hostsensor.server
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: janitoo_hostsensor
+    :members:
+    :undoc-members:
+    :show-inheritance:

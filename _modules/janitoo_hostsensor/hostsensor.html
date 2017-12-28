@@ -5,13 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>janitoo_hostsensor.hostsensor &mdash; janitoo_hostsensor 0.0.6 documentation</title>
+    <title>janitoo_hostsensor.hostsensor &#8212; janitoo_hostsensor 0.0.6 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -19,7 +17,8 @@
         VERSION:     '0.0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -30,17 +29,17 @@
     <script type="text/javascript" src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="janitoo_hostsensor 0.0.6 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -126,79 +125,79 @@
     <div class="col-md-12 content">
       
   <h1>Source code for janitoo_hostsensor.hostsensor</h1><div class="highlight"><pre>
-<span class="c"># -*- coding: utf-8 -*-</span>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;The hostsensor Janitoo helper</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="n">__license__</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="s">    This file is part of Janitoo.</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    This file is part of Janitoo.</span>
 
-<span class="s">    Janitoo is free software: you can redistribute it and/or modify</span>
-<span class="s">    it under the terms of the GNU General Public License as published by</span>
-<span class="s">    the Free Software Foundation, either version 3 of the License, or</span>
-<span class="s">    (at your option) any later version.</span>
+<span class="s2">    Janitoo is free software: you can redistribute it and/or modify</span>
+<span class="s2">    it under the terms of the GNU General Public License as published by</span>
+<span class="s2">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="s2">    (at your option) any later version.</span>
 
-<span class="s">    Janitoo is distributed in the hope that it will be useful,</span>
-<span class="s">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-<span class="s">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-<span class="s">    GNU General Public License for more details.</span>
+<span class="s2">    Janitoo is distributed in the hope that it will be useful,</span>
+<span class="s2">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="s2">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="s2">    GNU General Public License for more details.</span>
 
-<span class="s">    You should have received a copy of the GNU General Public License</span>
-<span class="s">    along with Janitoo. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="s2">    You should have received a copy of the GNU General Public License</span>
+<span class="s2">    along with Janitoo. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-<span class="s">&quot;&quot;&quot;</span>
-<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Sébastien GALLET aka bibi21000&#39;</span>
-<span class="n">__email__</span> <span class="o">=</span> <span class="s">&#39;bibi21000@gmail.com&#39;</span>
-<span class="n">__copyright__</span> <span class="o">=</span> <span class="s">&quot;Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi21000&quot;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Sébastien GALLET aka bibi21000&#39;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s1">&#39;bibi21000@gmail.com&#39;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi21000&quot;</span>
 
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">threading</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">uptime</span>
 
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-<span class="kn">from</span> <span class="nn">janitoo.options</span> <span class="kn">import</span> <span class="n">get_option_autostart</span>
-<span class="kn">from</span> <span class="nn">janitoo.utils</span> <span class="kn">import</span> <span class="n">HADD</span><span class="p">,</span> <span class="n">HADD_SEP</span><span class="p">,</span> <span class="n">json_dumps</span><span class="p">,</span> <span class="n">json_loads</span>
-<span class="kn">from</span> <span class="nn">janitoo.node</span> <span class="kn">import</span> <span class="n">JNTNode</span>
-<span class="kn">from</span> <span class="nn">janitoo.value</span> <span class="kn">import</span> <span class="n">JNTValue</span>
-<span class="kn">from</span> <span class="nn">janitoo.component</span> <span class="kn">import</span> <span class="n">JNTComponent</span>
-<span class="kn">from</span> <span class="nn">janitoo.thread</span> <span class="kn">import</span> <span class="n">JNTBusThread</span>
-<span class="kn">from</span> <span class="nn">janitoo.bus</span> <span class="kn">import</span> <span class="n">JNTBus</span>
-<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="kn">import</span> <span class="n">COMMAND_DESC</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">janitoo.options</span> <span class="k">import</span> <span class="n">get_option_autostart</span>
+<span class="kn">from</span> <span class="nn">janitoo.utils</span> <span class="k">import</span> <span class="n">HADD</span><span class="p">,</span> <span class="n">HADD_SEP</span><span class="p">,</span> <span class="n">json_dumps</span><span class="p">,</span> <span class="n">json_loads</span>
+<span class="kn">from</span> <span class="nn">janitoo.node</span> <span class="k">import</span> <span class="n">JNTNode</span>
+<span class="kn">from</span> <span class="nn">janitoo.value</span> <span class="k">import</span> <span class="n">JNTValue</span>
+<span class="kn">from</span> <span class="nn">janitoo.component</span> <span class="k">import</span> <span class="n">JNTComponent</span>
+<span class="kn">from</span> <span class="nn">janitoo.thread</span> <span class="k">import</span> <span class="n">JNTBusThread</span>
+<span class="kn">from</span> <span class="nn">janitoo.bus</span> <span class="k">import</span> <span class="n">JNTBus</span>
+<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="k">import</span> <span class="n">COMMAND_DESC</span>
 
-<span class="c">##############################################################</span>
-<span class="c">#Check that we are in sync with the official command classes</span>
-<span class="c">#Must be implemented for non-regression</span>
-<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="kn">import</span> <span class="n">COMMAND_DESC</span>
+<span class="c1">##############################################################</span>
+<span class="c1">#Check that we are in sync with the official command classes</span>
+<span class="c1">#Must be implemented for non-regression</span>
+<span class="kn">from</span> <span class="nn">janitoo.classes</span> <span class="k">import</span> <span class="n">COMMAND_DESC</span>
 
 <span class="n">COMMAND_DISPLAY</span> <span class="o">=</span> <span class="mh">0x0061</span>
 <span class="n">COMMAND_AV_CHANNEL</span> <span class="o">=</span> <span class="mh">0x2100</span>
 <span class="n">COMMAND_AV_VOLUME</span> <span class="o">=</span> <span class="mh">0x2101</span>
 <span class="n">COMMAND_NOTIFY</span> <span class="o">=</span> <span class="mh">0x3010</span>
 
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_DISPLAY</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_DISPLAY&#39;</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_AV_CHANNEL</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_AV_CHANNEL&#39;</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_AV_VOLUME</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_AV_VOLUME&#39;</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_NOTIFY</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;COMMAND_NOTIFY&#39;</span><span class="p">)</span>
-<span class="c">##############################################################</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_DISPLAY</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_DISPLAY&#39;</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_AV_CHANNEL</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_AV_CHANNEL&#39;</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_AV_VOLUME</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_AV_VOLUME&#39;</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">COMMAND_DESC</span><span class="p">[</span><span class="n">COMMAND_NOTIFY</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMAND_NOTIFY&#39;</span><span class="p">)</span>
+<span class="c1">##############################################################</span>
 
-<span class="kn">from</span> <span class="nn">janitoo_hostsensor</span> <span class="kn">import</span> <span class="n">OID</span>
+<span class="kn">from</span> <span class="nn">janitoo_hostsensor</span> <span class="k">import</span> <span class="n">OID</span>
 
 <div class="viewcode-block" id="make_load"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.make_load">[docs]</a><span class="k">def</span> <span class="nf">make_load</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Load</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+    <span class="k">return</span> <span class="n">Load</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="make_uptime"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.make_uptime">[docs]</a><span class="k">def</span> <span class="nf">make_uptime</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Uptime</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
-<div class="viewcode-block" id="make_thread"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.make_thread">[docs]</a><span class="k">def</span> <span class="nf">make_thread</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">force</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">get_option_autostart</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">OID</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span> <span class="ow">or</span> <span class="n">force</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">Uptime</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="make_thread"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.make_thread">[docs]</a><span class="k">def</span> <span class="nf">make_thread</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">force</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">get_option_autostart</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">OID</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">or</span> <span class="n">force</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">HostSensorThread</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">None</span>
-</div>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
 <div class="viewcode-block" id="HostSensorThread"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.HostSensorThread">[docs]</a><span class="k">class</span> <span class="nc">HostSensorThread</span><span class="p">(</span><span class="n">JNTBusThread</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The HostSensor thread</span>
 
@@ -206,76 +205,90 @@
 <div class="viewcode-block" id="HostSensorThread.init_bus"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.HostSensorThread.init_bus">[docs]</a>    <span class="k">def</span> <span class="nf">init_bus</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Build the bus</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="s">&#39;hostsensor&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bus</span> <span class="o">=</span> <span class="n">JNTBus</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">oid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="p">,</span> <span class="n">product_name</span><span class="o">=</span><span class="s">&quot;Host sensor controller&quot;</span><span class="p">)</span>
-</div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="s1">&#39;hostsensor&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bus</span> <span class="o">=</span> <span class="n">JNTBus</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">oid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="p">,</span> <span class="n">product_name</span><span class="o">=</span><span class="s2">&quot;Host sensor controller&quot;</span><span class="p">)</span></div></div>
+
 <div class="viewcode-block" id="Load"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Load">[docs]</a><span class="k">class</span> <span class="nc">Load</span><span class="p">(</span><span class="n">JNTComponent</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Return Load system &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">JNTComponent</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.load&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">JNTComponent</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;oid&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.load&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
             <span class="n">bus</span> <span class="o">=</span> <span class="n">bus</span><span class="p">,</span>
             <span class="n">addr</span> <span class="o">=</span> <span class="n">addr</span><span class="p">,</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Load&quot;</span><span class="p">),</span>
-            <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&quot;Load statistics&quot;</span><span class="p">),</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s2">&quot;Load&quot;</span><span class="p">),</span>
+            <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;product_name&#39;</span><span class="p">,</span> <span class="s2">&quot;Load statistics&quot;</span><span class="p">),</span>
             <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;load&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;sensor_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;load&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;sensor_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;The load average&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Load&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The load average&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Load&#39;</span><span class="p">,</span>
             <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_load_average</span><span class="p">,</span>
             <span class="n">genre</span><span class="o">=</span><span class="mh">0x01</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">config_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_config_value</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s">&#39;The load average index (1, 5, and 15m)&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;loadavg&#39;</span><span class="p">,</span> <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_config</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mh">0x02</span><span class="p">)</span>
+        <span class="n">config_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_config_value</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s1">&#39;The load average index (1, 5, and 15m)&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;loadavg&#39;</span><span class="p">,</span> <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_config</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mh">0x02</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">config_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_value</span>
         <span class="n">poll_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">create_poll_value</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">poll_value</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="n">poll_value</span>
 
+    <span class="k">def</span> <span class="nf">_create_instances</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">instances</span><span class="p">:</span>
+            <span class="n">value</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">value</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1 minutes&#39;</span>
+            <span class="k">elif</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">value</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;5 minutes&#39;</span>
+            <span class="k">elif</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">value</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;15 minutes&#39;</span>
+
 <div class="viewcode-block" id="Load.get_config"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Load.get_config">[docs]</a>    <span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;1 minutes&#39;</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;5 minutes&#39;</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s">&#39;config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;15 minutes&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;config&#39;</span><span class="p">]</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_instances</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">],</span> <span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;config&#39;</span><span class="p">]</span></div>
+
 <div class="viewcode-block" id="Load.get_load_average"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Load.get_load_average">[docs]</a>    <span class="k">def</span> <span class="nf">get_load_average</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">index</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">None</span>
+            <span class="k">return</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">avg</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getloadavg</span><span class="p">())</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s">&#39;data&#39;</span><span class="p">]</span>
-</div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_create_instances</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">instances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Load.check_heartbeat"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Load.check_heartbeat">[docs]</a>    <span class="k">def</span> <span class="nf">check_heartbeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check that the component is &#39;available&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div></div>
+
 <div class="viewcode-block" id="Uptime"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Uptime">[docs]</a><span class="k">class</span> <span class="nc">Uptime</span><span class="p">(</span><span class="n">JNTComponent</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Return Load system &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">JNTComponent</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;oid&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.uptime&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">JNTComponent</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">oid</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;oid&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.uptime&#39;</span><span class="o">%</span><span class="n">OID</span><span class="p">),</span>
             <span class="n">bus</span> <span class="o">=</span> <span class="n">bus</span><span class="p">,</span>
             <span class="n">addr</span> <span class="o">=</span> <span class="n">addr</span><span class="p">,</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="s">&quot;Uptime&quot;</span><span class="p">),</span>
-            <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;product_name&#39;</span><span class="p">,</span> <span class="s">&quot;Uptime statistics&quot;</span><span class="p">),</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s2">&quot;Uptime&quot;</span><span class="p">),</span>
+            <span class="n">product_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;product_name&#39;</span><span class="p">,</span> <span class="s2">&quot;Uptime statistics&quot;</span><span class="p">),</span>
             <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;[</span><span class="si">%s</span><span class="s">] - __init__ node uuid:</span><span class="si">%s</span><span class="s">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">%s</span><span class="s2">] - __init__ node uuid:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
 
-        <span class="n">uuid</span><span class="o">=</span><span class="s">&quot;uptime&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s">&#39;sensor_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="s2">&quot;uptime&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">uuid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_factory</span><span class="p">[</span><span class="s1">&#39;sensor_float&#39;</span><span class="p">](</span><span class="n">options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span> <span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
             <span class="n">node_uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span>
-            <span class="n">help</span><span class="o">=</span><span class="s">&#39;Uptime in seconds&#39;</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s">&#39;Uptime&#39;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Uptime in seconds&#39;</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Uptime&#39;</span><span class="p">,</span>
             <span class="n">get_data_cb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_uptime</span><span class="p">,</span>
             <span class="n">genre</span><span class="o">=</span><span class="mh">0x01</span><span class="p">,</span>
         <span class="p">)</span>
@@ -285,7 +298,15 @@
 <div class="viewcode-block" id="Uptime.get_uptime"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Uptime.get_uptime">[docs]</a>    <span class="k">def</span> <span class="nf">get_uptime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_uuid</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">uptime</span><span class="o">.</span><span class="n">uptime</span><span class="p">()</span></div></div>
+        <span class="k">return</span> <span class="n">uptime</span><span class="o">.</span><span class="n">uptime</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Uptime.check_heartbeat"><a class="viewcode-back" href="../../api/index.html#janitoo_hostsensor.hostsensor.Uptime.check_heartbeat">[docs]</a>    <span class="k">def</span> <span class="nf">check_heartbeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check that the component is &#39;available&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="s1">&#39;uptime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div></div>
 </pre></div>
 
     </div>
@@ -300,7 +321,7 @@
     </p>
     <p>
         &copy; Copyright 2014,2015,2016 Sébastien GALLET aka bibi2100 &lt;bibi21000@gmail.com&gt;.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.<br/>
     </p>
   </div>
 </footer>
