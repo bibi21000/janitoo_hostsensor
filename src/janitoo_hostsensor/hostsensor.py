@@ -26,20 +26,15 @@ __copyright__ = "Copyright © 2013-2014-2015-2016 Sébastien GALLET aka bibi2100
 
 import logging
 logger = logging.getLogger(__name__)
-import os, sys
-import threading
-import time
+import os
 import uptime
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from janitoo.options import get_option_autostart
-from janitoo.utils import HADD, HADD_SEP, json_dumps, json_loads
-from janitoo.node import JNTNode
-from janitoo.value import JNTValue
+from janitoo.utils import HADD, json_dumps, json_loads
 from janitoo.component import JNTComponent
 from janitoo.thread import JNTBusThread
 from janitoo.bus import JNTBus
-from janitoo.classes import COMMAND_DESC
 
 ##############################################################
 #Check that we are in sync with the official command classes
